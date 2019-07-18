@@ -64,8 +64,7 @@ bool if_resetVolume = false;
 float max_w = 1000;
 
 typedef Eigen::Matrix<float, 4,4 ,Eigen::RowMajor> Mat4;
-void setVMatrix(float3 eyepose, float3 eyecenter, float3 upvector, loo::Mat<float,3,4>& matout)
-{	
+void setVMatrix(float3 eyepose, float3 eyecenter, float3 upvector, loo::Mat<float,3,4>& matout)	{	
 	float3 Pc = eyepose;
 	float3 Zc = normalize(Pc - eyecenter);
 	float3 Yc = normalize(upvector);
@@ -87,10 +86,8 @@ void setVMatrix(float3 eyepose, float3 eyecenter, float3 upvector, loo::Mat<floa
 	Vmatrix(2,3) = -dot(Zc, Pc);
 	std::cout<<Vmatrix<<std::endl<<std::endl;
 	Eigen::Matrix<float,3,4, Eigen::RowMajor> Vmat = Vmatrix.inverse().block<3,4>(0,0);
-	for(int r = 0 ; r < 3 ; r ++)
-	{
-		for(int c = 0 ; c < 4 ; c++)
-		{
+	for(int r = 0 ; r < 3 ; r ++) {
+		for(int c = 0 ; c < 4 ; c++) {
 			matout(r,c) = Vmat(r,c);
 		}
 	}
@@ -120,8 +117,7 @@ void keyboard( unsigned char key, int x, int y ) {
 	}
 }
 
-void tsdfprocessing()
-{
+void tsdfprocessing() {
 	float raycast_near = 1000;
 	float raycast_far = 3000;
 	float depth_clip_near = 1000;
@@ -161,10 +157,8 @@ void tsdfprocessing()
 	h_raycast_render.CopyFrom(d_raycast_render);
 }
 
-//void render()
-//{
-//	if(if_resetVolume) 
-//	{
+//void render() {
+//	if(if_resetVolume) {
 //		loo::SdfReset(vol, trunc_dist);
 //		if_resetVolume = false;
 //	}
@@ -178,11 +172,9 @@ int global_index = 0;
 vector<vector<float>> depth_buff(FRAME_NUM);
 
 
-void render2()
-{
+void render2() {
 	cout<<global_index<<" ";
-	if(if_resetVolume) 
-	{
+	if(if_resetVolume) {
 		loo::SdfReset(vol, trunc_dist);
 		if_resetVolume = false;
 	}
@@ -193,18 +185,15 @@ void render2()
 	global_index %= FRAME_NUM;
 }
 
-inline int countones(unsigned char c)
-{
+inline int countones(unsigned char c) {
 	int count = 0;
-	for(int i = 0 ; i < 8 ; i ++)
-	{
+	for(int i = 0 ; i < 8 ; i ++) {
 		if(c & 1 << i ) count ++;
 	}
 	return count;
 }
 
-void MeshClean(CMeshO & cm_in, CMeshO & cm_out)
-{
+void MeshClean(CMeshO & cm_in, CMeshO & cm_out) {
 	tri::UpdateNormal<CMeshO>::PerVertex(cm_in);
 	tri::UpdateNormal<CMeshO>::NormalizePerVertex(cm_in);
 	int dup = tri::Clean<CMeshO>::RemoveDuplicateVertex(cm_in);
@@ -221,8 +210,7 @@ void MeshClean(CMeshO & cm_in, CMeshO & cm_out)
 }
 
 
-void MeshOutput()
-{
+void MeshOutput() {
 	int abcd;
 	abcd = 0;
 	ttime.Start();
@@ -235,15 +223,11 @@ void MeshOutput()
 	int count_triangles = 0;
 	mask.reserve(200000);
 	index.reserve(200000);
-	for( int z = 0 ; z < volres.z -1 ; z++ )
-	{
-		for( int y = 0 ; y < volres.y -1 ; y++ )
-		{
-			for(int x = 0 ; x < volres.x -1 ; x++ )
-			{
+	for( int z = 0 ; z < volres.z -1 ; z++ ) {
+		for( int y = 0 ; y < volres.y -1 ; y++ ) {
+			for(int x = 0 ; x < volres.x -1 ; x++ )	{
 				uchar2 m = h_vol_mask(x,y,z);
-				if(m.x != 0 && m.y != 0)
-				{
+				if(m.x != 0 && m.y != 0) {
 					mask.push_back(m);
 					index.push_back(make_int3(x,y,z));
 					count_triangles += countones(m.y);
@@ -272,15 +256,13 @@ void MeshOutput()
 	cm.face.resize(faces.size());
 	cm.fn = cm.face.size();
 
-	Concurrency::parallel_for(0, (int) cm.vert.size(), [&](int k)
-	{
+	Concurrency::parallel_for(0, (int) cm.vert.size(), [&](int k) {
 		cm.vert.at(k).P() = vcg::Point3f(verts[k].x, verts[k].y, verts[k].z);
 	});
 
 	CVertexO * V_start = &cm.vert[0];
 
-	for(int k = 0 ; k < cm.face.size(); k++)
-	{
+	for(int k = 0 ; k < cm.face.size(); k++) {
 		cm.face[k].setvptr(0, V_start + faces[k].x);
 		cm.face[k].setvptr(2, V_start + faces[k].y);
 		cm.face[k].setvptr(1, V_start + faces[k].z);
@@ -298,13 +280,11 @@ void MeshOutput()
 
 
 
-int main(int argc, char** argv )
-{
+int main(int argc, char** argv ) {
 	//input depth here for testing
 	//depth_buff store the readin depth images
 	//FRAME_NUM is how many frames you import
-	for(int i = 0 ; i < FRAME_NUM ; i++ )
-	{
+	for(int i = 0 ; i < FRAME_NUM ; i++ ) {
 		string s("depth//pose5//");
 		s.append(to_string(i));
 		s.append("_Depth.png");
