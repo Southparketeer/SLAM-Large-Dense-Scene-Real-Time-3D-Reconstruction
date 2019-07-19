@@ -20,7 +20,7 @@ For each iteration:
 </p>
 
 <p align="center">
-<img width="500" src= demo/explain_ptp.png>
+<img width="400" src= demo/explain_ptp.png>
 </p>
 
 ### Projective Correspondences
