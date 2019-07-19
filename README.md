@@ -25,12 +25,12 @@ For each iteration:
 
 ### Projective Correspondences
 
-Incoming depth image
+#### Source: incoming depth image, stramed from the RGBD sensor
 <p align="center">
    <img width="300" src= demo/incoming_depth.bmp>
 </p>
 
-Generated depth image from TSDF volume
+#### Target: Generated depth image and corresponding normal map from the TSDF volume
 <p align="center">
    <img width="300" src= demo/raycast_depth.bmp/>
    <img width="300" src= demo/raycast_normal.bmp/>
