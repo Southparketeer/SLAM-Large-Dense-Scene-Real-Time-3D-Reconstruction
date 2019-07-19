@@ -1,11 +1,11 @@
 # SLAM Large Dense Scene Real Time 3D Reconstruction
 GPU based camera tracking volumetric fusion and rendering.
 
-* Camera Tracking: Track camera poses in real-time by registering incoming depth image to the generated depth from fused TSDF. 
+* __Camera Tracking__: Track camera poses in real-time by registering incoming depth image to the generated depth from fused TSDF. 
 
-* Volumetric Fusion: With the updated camera pose, fuse the new income depth to the fused TSDF volume in real-time. 
+* __Volumetric Fusion__: With the updated camera pose, fuse the new income depth to the fused TSDF volume in real-time. 
 
-* Volumetric Rendering: Render the fused TSDF volume in real-time.
+* __Volumetric Rendering__: Render the fused TSDF volume in real-time.
 
 # Title1
 
