@@ -47,6 +47,10 @@ In practice, we match the surface generated from incoming depth strame (source) 
 
 ## GPU Based Real-time Volumetric Fusion
 
+<p align="center">
+   <img width="400" src= demo/incoming_depth.bmp>
+</p>
+
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
 
 ## TSDF Volume to 3D Mesh: Marching Cubes Algorithm 
@@ -81,5 +85,6 @@ dependency:
 
 [3] Lorensen, William E., and Harvey E. Cline. "Marching cubes: A high resolution 3D surface construction algorithm." In ACM siggraph computer graphics, vol. 21, no. 4, pp. 163-169. ACM, 1987.
 
+[4] Newcombe, Richard A., Shahram Izadi, Otmar Hilliges, David Molyneaux, David Kim, Andrew J. Davison, Pushmeet Kohli, Jamie Shotton, Steve Hodges, and Andrew W. Fitzgibbon. "Kinectfusion: Real-time dense surface mapping and tracking." In ISMAR, vol. 11, no. 2011, pp. 127-136. 2011.
 
 
