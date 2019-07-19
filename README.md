@@ -10,7 +10,7 @@ To estimate the 6 DoF for camera pose update (3 for rotation and 3 for translati
 
 #### Point-to-plane error metric [1]
 ![](demo/explain_ptp.png)
-$a/b+1$
+"$ f'(x) = \\lim_{h\\to0} \\frac{f(x+h) - f(x)}{h}. $"
 
 ### Generate Depth Image From TSDF volume
 
