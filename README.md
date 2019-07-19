@@ -6,7 +6,8 @@ GPU based camera tracking volumetric fusion and rendering.
 
 ## GPU Based Real-time RGBD Camera Tracking
 ### Rigid Iterative Closest Point (ICP) with Projective Correspondence 
-
+Point-to-plane error metric
+![Point to Plane](demo/explain_ptp.png)
 ### Generate Depth Image From TSDF volume
 
 ## GPU Based Real-time Volumetric Fusion
