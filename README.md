@@ -9,3 +9,14 @@ GPU based camera tracking volumetric fusion and rendering.
 ## GPU Based Real-time Volumetric Fusion
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
+## Install
+dependency: 
+1. vcglib http://vcg.isti.cnr.it/vcglib/ for geometry processing
+2. Eigen http://eigen.tuxfamily.org/index.php?title=Main_Page for matrix computation
+3. CUDA https://developer.nvidia.com/cuda-downloads for CUDA kernel
+4. OpenGL https://www.opengl.org/ for display
+5. Microsoft Kinect SDK https://www.microsoft.com/en-us/download/details.aspx?id=44561 
+   or libfreenect2 https://github.com/OpenKinect/libfreenect2 for depth strame input from Kinect
+
+
+
