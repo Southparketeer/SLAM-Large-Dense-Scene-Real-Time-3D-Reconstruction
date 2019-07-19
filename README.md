@@ -26,6 +26,11 @@ For each iteration:
 ### Projective Correspondences
 
 Incoming depth image
+<p align="center">
+   <img width="400" src= demo/incoming_depth.png>
+   <img width="400" src= demo/raycast_depthh.png>
+   <img width="400" src= demo/raycast_normal.png>
+</p>
 
 Generated depth image from TSDF volume
 
