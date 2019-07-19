@@ -39,6 +39,7 @@ In practice, we match the surface generated from incoming depth strame (source) 
 </p>
 
 * Target: Generated depth image and corresponding normal map from the TSDF volume
+
 <p align="center">
    <img width="400" src= demo/raycast_depth.bmp/>
    <img width="400" src= demo/raycast_normal.bmp/>
@@ -46,11 +47,16 @@ In practice, we match the surface generated from incoming depth strame (source) 
 
 
 ## GPU Based Real-time Volumetric Fusion
+
 <p align="center">
-   <img width="400" src= >
+   <img width="400" src= demo/expline_TSDF.PNG>
 </p>
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
+
+<p align="center">
+   <img width="400" src= demo/explain_ray_casting.PNG>
+</p>
 
 ## TSDF Volume to 3D Mesh: Marching Cubes Algorithm 
 
