@@ -52,7 +52,7 @@ In practice, we match the surface generated from incoming depth strame (source) 
 ## TSDF Volume to 3D Mesh: Marching Cubes Algorithm
 
 <p align="center">
-   <img width="300" src= demo/explain_Marching_Cubes.png>
+   <img width="500" src= demo/explain_Marching_Cubes.png>
 </p>
 
 ## Demo
