@@ -12,6 +12,7 @@ fjejalsejfifaw
 
 ** feajifes
 
-'''python
-print('This is a test document')
-'''
+```python
+s = "Python syntax highlighting"
+print s
+```
