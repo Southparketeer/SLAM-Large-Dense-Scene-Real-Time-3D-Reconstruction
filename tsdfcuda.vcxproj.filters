@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="cu_bilateral.cu">
+      <Filter>Kernel</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cu_raycast.cu">
+      <Filter>Kernel</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cu_sdffusion.cu">
+      <Filter>Kernel</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cu_depth_tools.cu">
+      <Filter>Kernel</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cu_normals.cu">
+      <Filter>Kernel</Filter>
+    </CudaCompile>
+    <CudaCompile Include="MarchingCubes.cu">
+      <Filter>Kernel</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cu_semi_global_matching.cu">
+      <Filter>Kernel</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cu_medium.cu">
+      <Filter>Kernel</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="EasyBMP.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cu_bilateral.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="cu_raycast.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="cu_sdffusion.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="Mat.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundedVolume.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingBox.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="cutil_math.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageIntrinsics.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="pixel_convert.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="sampling.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="Sdf.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="MatUtils.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="launch_utils.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="InvalidValue.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="Volume.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyBMP.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyBMP_BMP.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyBMP_DataStructures.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyBMP_VariousBMPutilities.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="cu_depth_tools.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageKeyframe.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="patch_score.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="cu_normals.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="tsdfcuda.h" />
+    <ClInclude Include="MarchingCubes.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="MarchingCubesTables.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="CostVolElem.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="cu_semi_global_matching.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="disparity.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageApron.h">
+      <Filter>Encapsulate</Filter>
+    </ClInclude>
+    <ClInclude Include="bmp_io.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Depth.h">
+      <Filter>Depth</Filter>
+    </ClInclude>
+    <ClInclude Include="GLdisplay.h">
+      <Filter>GLDisplay</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="cu_medium.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Kernel">
+      <UniqueIdentifier>{6b6ba10f-70b9-4682-b7be-96d505595985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Encapsulate">
+      <UniqueIdentifier>{bc32246a-8584-4fb2-b31a-e174f446e997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depth">
+      <UniqueIdentifier>{6af2b2e2-8bb0-4526-8099-a72e2bdfddb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image">
+      <UniqueIdentifier>{60805fa9-7498-4efd-87aa-4c66a1831975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLDisplay">
+      <UniqueIdentifier>{20181c69-a3d7-4758-9da0-64f4459244e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
