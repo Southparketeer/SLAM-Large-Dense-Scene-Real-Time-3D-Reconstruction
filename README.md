@@ -16,21 +16,29 @@ For each iteration:
 ```
 
 <p align="center">
-<img width="400" src= http://latex.codecogs.com/gif.latex?%5Cbold%7BT%7D_%7Bopt%7D%20%3D%20%5Carg%20min_%7B%5Cbold%7BT%7D%7D%5Csum_i%20%7B%5Cleft%20%5C%7C%28%5Cbold%7BT%7D%20%5Ccdot%20%5Cbold%7Bs%7D_%7Bi%7D%20-%20%5Cbold%7Bd%7D_%7Bi%7D%29%5Ccdot%20%5Cbold%7Bn%7D_i%20%7D%5C%7C_2>
+<img width="300" src= http://latex.codecogs.com/gif.latex?%5Cbold%7BT%7D_%7Bopt%7D%20%3D%20%5Carg%20min_%7B%5Cbold%7BT%7D%7D%5Csum_i%20%7B%5Cleft%20%5C%7C%28%5Cbold%7BT%7D%20%5Ccdot%20%5Cbold%7Bs%7D_%7Bi%7D%20-%20%5Cbold%7Bd%7D_%7Bi%7D%29%5Ccdot%20%5Cbold%7Bn%7D_i%20%7D%5C%7C_2>
 </p>
 
 <p align="center">
-<img width="400" src= demo/explain_ptp.png>
+<img width="300" src= demo/explain_ptp.png>
 </p>
 
 ### Projective Correspondences
 
-#### Source: incoming depth image, stramed from the RGBD sensor
+We adopt projection matching to define correspondence. The figure below illustrates the difference between projection matching and normal shooting matching [2]. The advantage of the projective correspondence is speed, low computational workload, which is suitable for real-time application.
+
+<p align="center">
+   <img width="300" src= demo/explain_projective.png>
+</p>
+
+In practice, we match the surface generated from incoming depth strame (source) to the surface generated from the TSDF volume (Target). The maching is pixel-by-pixel which is very fast and suitable for GPU processing in real-time.  
+
+* Source: incoming depth image, stramed from the RGBD sensor
 <p align="center">
    <img width="300" src= demo/incoming_depth.bmp>
 </p>
 
-#### Target: Generated depth image and corresponding normal map from the TSDF volume
+* Target: Generated depth image and corresponding normal map from the TSDF volume
 <p align="center">
    <img width="300" src= demo/raycast_depth.bmp/>
    <img width="300" src= demo/raycast_normal.bmp/>
@@ -40,6 +48,8 @@ For each iteration:
 ## GPU Based Real-time Volumetric Fusion
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
+
+## TSDF Volume to 3D Mesh: Marching Cubes Algorithm
 
 ## Demo
 ### User Interface
