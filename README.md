@@ -6,8 +6,11 @@ GPU based camera tracking volumetric fusion and rendering.
 
 ## GPU Based Real-time RGBD Camera Tracking
 ### Rigid Iterative Closest Point (ICP) with Projective Correspondence 
+To estimate the 6 DoF for camera pose update (3 for rotation and 3 for translation), we use rigid registration algorithm - ICP. The objective function are as follow:
+
 #### Point-to-plane error metric [1]
 ![](demo/explain_ptp.png)
+$a/b+1$
 
 ### Generate Depth Image From TSDF volume
 
