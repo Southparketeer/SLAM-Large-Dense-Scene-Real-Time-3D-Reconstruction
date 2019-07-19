@@ -49,6 +49,8 @@ In practice, we match the surface generated from incoming depth strame (source) 
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
 
+## TSDF Volume to 3D Mesh: Marching Cubes Algorithm
+
 ## Demo
 ### User Interface
 ![UI](demo/SLAM_UI.png)
