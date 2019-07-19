@@ -26,18 +26,20 @@ For each iteration:
 ### Projective Correspondences
 
 #### Define Correspondence
-In this project, we adopt projection matching to define correspondence. The figure below illustrates the difference between projection matching and normal shooting matching [2]. The advantage of the projective correspondence is speed, low computational workload, which is suitable for real-time application. 
+In this project, we adopt projection matching to define correspondence. The figure below illustrates the difference between projection matching and normal shooting matching [2]. The advantage of the projective correspondence is speed, low computational workload, which is suitable for real-time application.
 
 <p align="center">
    <img width="300" src= demo/explain_projective.png>
 </p>
 
-#### Source: incoming depth image, stramed from the RGBD sensor
+In practice, we match the surface generated from incoming depth strame (source) to the surface generated from the TSDF volume (Target). The maching is pixel-by-pixel which is very fast and suitable for GPU processing in real-time.  
+
+* Source: incoming depth image, stramed from the RGBD sensor
 <p align="center">
    <img width="300" src= demo/incoming_depth.bmp>
 </p>
 
-#### Target: Generated depth image and corresponding normal map from the TSDF volume
+* Target: Generated depth image and corresponding normal map from the TSDF volume
 <p align="center">
    <img width="300" src= demo/raycast_depth.bmp/>
    <img width="300" src= demo/raycast_normal.bmp/>
