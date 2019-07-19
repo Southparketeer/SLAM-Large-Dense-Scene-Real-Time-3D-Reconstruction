@@ -5,6 +5,9 @@ GPU based camera tracking volumetric fusion and rendering.
 * Volumetric Rendering: Render the fused TSDF volume in real-time.
 
 ## GPU Based Real-time RGBD Camera Tracking
+### Rigid Iterative Closest Point (ICP) with Projective Correspondence 
+
+### Generate Depth Image From TSDF volume
 
 ## GPU Based Real-time Volumetric Fusion
 
