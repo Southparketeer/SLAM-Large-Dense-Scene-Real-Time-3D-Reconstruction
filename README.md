@@ -11,7 +11,7 @@ GPU based camera tracking volumetric fusion and rendering.
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
 
 ## Demo
-
+![alt text](http://url/to/img.png)
 ## Install
 dependency: 
 1. VCG library http://vcg.isti.cnr.it/vcglib/ for geometry processing
