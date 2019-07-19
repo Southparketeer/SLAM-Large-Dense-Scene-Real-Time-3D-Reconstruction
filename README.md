@@ -12,6 +12,6 @@ fjejalsejfifaw
 
 ** feajifes
 
-'''py
+'''python
 print('This is a test document')
 '''
