@@ -13,6 +13,5 @@ fjejalsejfifaw
 ** feajifes
 
 ```python
-s = "Python syntax highlighting"
-print s
+print "Python syntax highlighting"
 ```
