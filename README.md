@@ -11,8 +11,13 @@ GPU based camera tracking volumetric fusion and rendering.
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
 
 ## Demo
+### User Interface
 ![UI](demo/SLAM_UI.png)
+### Output Reconstructed 3D Mesh
 ![Mesh_Output](demo/SLAM_MeshOutput_1.png)
+### More Examples
+![More Example](demo/raycasting.png)
+
 ## Install
 dependency: 
 1. VCG library http://vcg.isti.cnr.it/vcglib/ for geometry processing
