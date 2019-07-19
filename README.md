@@ -49,7 +49,9 @@ In practice, we match the surface generated from incoming depth strame (source) 
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
 
-## TSDF Volume to 3D Mesh: Marching Cubes Algorithm
+## TSDF Volume to 3D Mesh: Marching Cubes Algorithm [3]
+
+With the TSDF volume, each voxel is associated with a value indicating the voxel is inside / outside the iso-surface and the distance to the iso-surface. We want to extract 3D triangle mesh from the TSDF volume. The 3D mesh triangles will be only generated from the cube on the iso-surface boundary. I.e., for the eight corners of the cube, at least one corner has an opposite sign to others. Thus, for the boundary cubes, there are 15 possible patterns in total to create triangle meshes. We use the Marching Cubes algorithm to convert TSDF volume to 3D mesh. Then we clean up the mesh by merging closing vertices to generate a connected mesh and then eliminate small isolated mesh pieces.
 
 <p align="center">
    <img width="500" src= demo/explain_Marching_Cubes.png>
@@ -76,6 +78,8 @@ dependency:
 [1] Low, Kok-Lim. "Linear least-squares optimization for point-to-plane icp surface registration." Chapel Hill, University of North Carolina 4, no. 10 (2004): 1-3.
 
 [2] Rusinkiewicz, Szymon, and Marc Levoy. "Efficient variants of the ICP algorithm." In 3dim, vol. 1, pp. 145-152. 2001.
+
+[3] Lorensen, William E., and Harvey E. Cline. "Marching cubes: A high resolution 3D surface construction algorithm." In ACM siggraph computer graphics, vol. 21, no. 4, pp. 163-169. ACM, 1987.
 
 
 
