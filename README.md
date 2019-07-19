@@ -25,14 +25,17 @@ For each iteration:
 
 ### Projective Correspondences
 
-Incoming depth image
+#### Source: incoming depth image, stramed from the RGBD sensor
 <p align="center">
-   <img width="400" src= demo/incoming_depth.png>
-   <img width="400" src= demo/raycast_depthh.png>
-   <img width="400" src= demo/raycast_normal.png>
+   <img width="300" src= demo/incoming_depth.bmp>
 </p>
 
-Generated depth image from TSDF volume
+#### Target: Generated depth image and corresponding normal map from the TSDF volume
+<p align="center">
+   <img width="300" src= demo/raycast_depth.bmp/>
+   <img width="300" src= demo/raycast_normal.bmp/>
+</p>
+
 
 ## GPU Based Real-time Volumetric Fusion
 
@@ -57,6 +60,7 @@ dependency:
    
 ## Reference 
 [1] Low, Kok-Lim. "Linear least-squares optimization for point-to-plane icp surface registration." Chapel Hill, University of North Carolina 4, no. 10 (2004): 1-3.
+
 [2] Rusinkiewicz, Szymon, and Marc Levoy. "Efficient variants of the ICP algorithm." In 3dim, vol. 1, pp. 145-152. 2001.
 
 
