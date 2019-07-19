@@ -27,10 +27,15 @@ For each iteration:
 
 Incoming depth image
 <p align="center">
-   <img width="400" src= demo/incoming_depth.png>
+   <img width="300" src= demo/incoming_depth.bmp>
 </p>
 
 Generated depth image from TSDF volume
+<p align="center">
+   <img width="300" src= demo/raycast_depth.bmp/>
+   <img width="300" src= demo/raycast_normal.bmp/>
+</p>
+
 
 ## GPU Based Real-time Volumetric Fusion
 
