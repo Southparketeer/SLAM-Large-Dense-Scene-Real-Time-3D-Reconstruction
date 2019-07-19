@@ -6,7 +6,7 @@ GPU based camera tracking volumetric fusion and rendering.
 
 ## GPU Based Real-time RGBD Camera Tracking
 ### Rigid Iterative Closest Point (ICP) with point-to-plane error metric
-To estimate the 6 DoF for camera pose update (3 for rotation and 3 for translation), we use rigid registration algorithm - ICP. The objective function is shown as follow, where s denotes the source vertex position; d denotes its corresponding target vertex position; n denotes the surface normal on target vertex d. [1] The advantage of point-to-plane error metric compared with the point-to-point error metric is the point-to-plane error metric allows two surface slide over each other to avoid being trapped into undesired local minima. Comparison of the two can be found in [2].
+To estimate the 6 DoF for camera pose update (3 for rotation and 3 for translation), we use rigid registration algorithm - ICP. The objective function is shown as follow, where s denotes the source vertex position; d denotes its corresponding target vertex position; n denotes the surface normal on target vertex d. [1] The advantage of point-to-plane error metric compared with the point-to-point error metric is the point-to-plane error metric allows two surface to slide over each other, and thus to avoid being trapped into undesired local minima. Comparison of the two can be found in [2].
 
 ``` 
 For each iteration:
@@ -23,10 +23,11 @@ For each iteration:
 <img width="500" src= demo/explain_ptp.png>
 </p>
 
+### Projective Correspondences
 
-### Generate Depth Image From TSDF volume
+Incoming depth image
 
-
+Generated depth image from TSDF volume
 
 ## GPU Based Real-time Volumetric Fusion
 
