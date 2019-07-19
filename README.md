@@ -92,4 +92,6 @@ dependency:
 
 [4] Newcombe, Richard A., Shahram Izadi, Otmar Hilliges, David Molyneaux, David Kim, Andrew J. Davison, Pushmeet Kohli, Jamie Shotton, Steve Hodges, and Andrew W. Fitzgibbon. "Kinectfusion: Real-time dense surface mapping and tracking." In ISMAR, vol. 11, no. 2011, pp. 127-136. 2011.
 
+[5] https://www.nvidia.com/content/GTC/documents/1102_GTC09.pdf
+
 
