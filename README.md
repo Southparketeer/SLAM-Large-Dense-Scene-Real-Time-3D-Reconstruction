@@ -46,7 +46,6 @@ In practice, we match the surface generated from incoming depth strame (source) 
 
 
 ## GPU Based Real-time Volumetric Fusion
-
 <p align="center">
    <img width="400" src= demo/expline_TSDF.png>
 </p>
