@@ -13,5 +13,5 @@ fjejalsejfifaw
 ** feajifes
 
 ```python
-print "Python syntax highlighting"
+print('I'm a cat')
 ```
