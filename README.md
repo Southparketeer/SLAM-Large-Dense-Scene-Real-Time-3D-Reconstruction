@@ -48,7 +48,7 @@ In practice, we match the surface generated from incoming depth strame (source) 
 ## GPU Based Real-time Volumetric Fusion
 
 <p align="center">
-   <img width="400" src= demo/incoming_depth.bmp>
+   <img width="400" src= demo/expline_TSDF.png>
 </p>
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
