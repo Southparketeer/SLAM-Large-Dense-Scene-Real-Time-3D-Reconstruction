@@ -55,7 +55,7 @@ In practice, we match the surface generated from incoming depth strame (source) 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
 
 <p align="center">
-   <img width="400" src= demo/explain_ray_casting.PNG>
+   <img width="400" src= demo/explain_ray_casting.png>
 </p>
 
 ## TSDF Volume to 3D Mesh: Marching Cubes Algorithm 
