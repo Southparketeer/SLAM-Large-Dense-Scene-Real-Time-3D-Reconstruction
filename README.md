@@ -56,7 +56,7 @@ We use Truncated Signed Distance Function (TSDF) volume to store registrated dep
 To robustly handle noisy depth input and to fuse the depth information into current TSDF volume, we weighted combine the new information with the TSDF volume updated last frame and also update the weight for each voxel.
 
 <p align="center">
-   <img width="300" src= http://latex.codecogs.com/svg.latex?%5CLARGE%20%5Cbegin%7Bmatrix%7D%20F_k%20%3D%20%5Cfrac%7BW_%7Bk-1%7D%5Ccdot%20F_%7Bk%20-%201%7D%20&plus;%20W_%7Bnew%7D%5Ccdot%20F_%7Bnew%7D%7D%7BW_%7Bk-1%7D%20&plus;%20W_%7Bnew%7D%7D%20%5C%5C%20W_k%20%3D%20W_%7Bk%20-%201%7D%20&plus;%20W_%7Bnew%7D%20%5Cend%7Bmatrix%7D>
+   <img width="230" src= http://latex.codecogs.com/svg.latex?%5CLARGE%20%5Cbegin%7Bmatrix%7D%20F_k%20%3D%20%5Cfrac%7BW_%7Bk-1%7D%5Ccdot%20F_%7Bk%20-%201%7D%20&plus;%20W_%7Bnew%7D%5Ccdot%20F_%7Bnew%7D%7D%7BW_%7Bk-1%7D%20&plus;%20W_%7Bnew%7D%7D%20%5C%5C%20W_k%20%3D%20W_%7Bk%20-%201%7D%20&plus;%20W_%7Bnew%7D%20%5Cend%7Bmatrix%7D>
 </p>
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
