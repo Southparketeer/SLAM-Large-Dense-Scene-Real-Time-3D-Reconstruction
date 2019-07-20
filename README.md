@@ -20,7 +20,7 @@ For each iteration:
 </p>
 <!-- + \bold{T}_{opt} = \arg min_{\bold{T}}\sum_i {\left \|(\bold{T} \cdot \bold{s}_{i} - \bold{d}_{i})\cdot \bold{n}_i }\|_2 + -->
 <p align="center">
-<img width="300" src= demo/explain_ptp.png>
+<img width="500" src= demo/explain_ptp.png>
 </p>
 
 ### Projective Correspondences
