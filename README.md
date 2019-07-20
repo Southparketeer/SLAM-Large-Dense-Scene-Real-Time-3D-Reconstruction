@@ -47,6 +47,7 @@ In practice, we match the surface generated from incoming depth strame (source) 
 
 
 ## GPU Based Real-time Volumetric Fusion
+We use Truncated Signed Distance Function (TSDF) volume to store registrated depth data. Compared to using point could, TSDF volume is excelling at robustly handling noise. The implementation is based on the Kinect Fusion Algorithm [4]. SDF represents surface interfaces as zeros, free space as positive values that increase with distance from the nearest surface, and occupied space as negative decreasing with distance.[4] The truncated SDF defines a threshold of distance to the interface, larger than which, the value is set as constant. 
 
 <p align="center">
    <img width="400" src= demo/expline_TSDF.PNG>
