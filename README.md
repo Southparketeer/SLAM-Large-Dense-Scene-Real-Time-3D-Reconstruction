@@ -16,9 +16,9 @@ For each iteration:
 ```
 
 <p align="center">
-<img width="300" src= http://latex.codecogs.com/gif.latex?%5Cbold%7BT%7D_%7Bopt%7D%20%3D%20%5Carg%20min_%7B%5Cbold%7BT%7D%7D%5Csum_i%20%7B%5Cleft%20%5C%7C%28%5Cbold%7BT%7D%20%5Ccdot%20%5Cbold%7Bs%7D_%7Bi%7D%20-%20%5Cbold%7Bd%7D_%7Bi%7D%29%5Ccdot%20%5Cbold%7Bn%7D_i%20%7D%5C%7C_2>
+<img width="300" src= http://latex.codecogs.com/svg.latex?%5CLARGE%20%5Cbold%7BT%7D_%7Bopt%7D%20%3D%20%5Carg%20min_%7B%5Cbold%7BT%7D%7D%5Csum_i%20%7B%5Cleft%20%5C%7C%28%5Cbold%7BT%7D%20%5Ccdot%20%5Cbold%7Bs%7D_%7Bi%7D%20-%20%5Cbold%7Bd%7D_%7Bi%7D%29%5Ccdot%20%5Cbold%7Bn%7D_i%20%7D%5C%7C_2>
 </p>
-
+<!-- + \bold{T}_{opt} = \arg min_{\bold{T}}\sum_i {\left \|(\bold{T} \cdot \bold{s}_{i} - \bold{d}_{i})\cdot \bold{n}_i }\|_2 + -->
 <p align="center">
 <img width="300" src= demo/explain_ptp.png>
 </p>
@@ -58,6 +58,12 @@ To robustly handle noisy depth input and to fuse the depth information into curr
 <p align="center">
    <img width="230" src= http://latex.codecogs.com/svg.latex?%5CLARGE%20%5Cbegin%7Bmatrix%7D%20F_k%20%3D%20%5Cfrac%7BW_%7Bk-1%7D%5Ccdot%20F_%7Bk%20-%201%7D%20&plus;%20W_%7Bnew%7D%5Ccdot%20F_%7Bnew%7D%7D%7BW_%7Bk-1%7D%20&plus;%20W_%7Bnew%7D%7D%20%5C%5C%20W_k%20%3D%20W_%7Bk%20-%201%7D%20&plus;%20W_%7Bnew%7D%20%5Cend%7Bmatrix%7D>
 </p>
+<!-- + \begin{matrix}
+F_k = \frac{W_{k-1}\cdot F_{k - 1} + W_{new}\cdot F_{new}}{W_{k-1} + W_{new}}
+\\ 
+W_k = W_{k - 1} + W_{new}
+\end{matrix} + -->
+
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
 
