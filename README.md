@@ -47,10 +47,16 @@ In practice, we match the surface generated from incoming depth strame (source) 
 
 
 ## GPU Based Real-time Volumetric Fusion
-We use Truncated Signed Distance Function (TSDF) volume to store registrated depth data. Compared to using point could, TSDF volume is excelling at robustly handling noise. The implementation is based on the Kinect Fusion Algorithm [4]. SDF represents surface interfaces as zeros, free space as positive values that increase with distance from the nearest surface, and occupied space as negative decreasing with distance.[4] The truncated SDF defines a threshold of distance to the interface, larger than which, the value is set as constant. 
+We use Truncated Signed Distance Function (TSDF) volume to store registrated depth data. Compared to using point could, TSDF volume is excelling at robustly handling noise. SDF represents surface interfaces as zeros, free space as positive values that increase with distance from the nearest surface, and occupied space as negative.[4] The truncated SDF defines a threshold of the distance to interface, larger than which, the value is set as constant.  
 
 <p align="center">
    <img width="400" src= demo/expline_TSDF.PNG>
+</p>
+
+To robustly handle noisy depth input and to fuse the depth information into current TSDF volume, we weighted combine the new information with the TSDF volume updated last frame and also update the weight for each voxel.
+
+<p align="center">
+   <img width="400" src= http://latex.codecogs.com/svg.latex?%5CLARGE%20%5Cbegin%7Bmatrix%7D%20F_k%20%3D%20%5Cfrac%7BW_%7Bk-1%7D%5Ccdot%20F_%7Bk%20-%201%7D%20&plus;%20W_%7Bnew%7D%5Ccdot%20F_%7Bnew%7D%7D%7BW_%7Bk-1%7D%20&plus;%20W_%7Bnew%7D%7D%20%5C%5C%20W_k%20%3D%20W_%7Bk%20-%201%7D%20&plus;%20W_%7Bnew%7D%20%5Cend%7Bmatrix%7D>
 </p>
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
