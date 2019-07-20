@@ -28,7 +28,7 @@ For each iteration:
 We adopt projection matching to define correspondence. The figure below illustrates the difference between projection matching and normal shooting matching [2]. The advantage of the projective correspondence is speed, low computational workload, which is suitable for real-time application.
 
 <p align="center">
-   <img width="400" src= demo/explain_projective.png>
+   <img width="500" src= demo/explain_projective.png>
 </p>
 
 In practice, we match the surface generated from incoming depth strame (source) to the surface generated from the TSDF volume (Target). The maching is pixel-by-pixel which is very fast and suitable for GPU processing in real-time.  
@@ -50,7 +50,7 @@ In practice, we match the surface generated from incoming depth strame (source) 
 We use Truncated Signed Distance Function (TSDF) volume to store registrated depth data. Compared to using point could, TSDF volume is excelling at robustly handling noise. SDF represents surface interfaces as zeros, free space as positive values that increase with distance from the nearest surface, and occupied space as negative.[4] The truncated SDF defines a threshold of the distance to interface, larger than which, the value is set as constant.  
 
 <p align="center">
-   <img width="400" src= demo/expline_TSDF.PNG>
+   <img width="500" src= demo/expline_TSDF.PNG>
 </p>
 
 To robustly handle noisy depth input and to fuse the depth information into current TSDF volume, we weighted combine the new information with the TSDF volume updated last frame and also update the weight for each voxel.
