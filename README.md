@@ -50,7 +50,7 @@ In practice, we match the surface generated from incoming depth strame (source) 
 We use Truncated Signed Distance Function (TSDF) volume to store registrated depth data. Compared to using point could, TSDF volume is excelling at robustly handling noise. SDF represents surface interfaces as zeros, free space as positive values that increase with distance from the nearest surface, and occupied space as negative.[4] The truncated SDF defines a threshold of the distance to interface, larger than which, the value is set as constant.  
 
 <p align="center">
-   <img width="500" src= demo/expline_TSDF.PNG>
+   <img width="600" src= demo/expline_TSDF.PNG>
 </p>
 
 To robustly handle noisy depth input and to fuse the depth information into current TSDF volume, we weighted combine the new information with the TSDF volume updated last frame and also update the weight for each voxel.
@@ -68,7 +68,7 @@ W_k = W_{k - 1} + W_{new}
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
 
 <p align="center">
-   <img width="400" src= demo/explain_ray_casting.png>
+   <img width="600" src= demo/explain_ray_casting.png>
 </p>
 
 ## TSDF Volume to 3D Mesh: Marching Cubes Algorithm 
