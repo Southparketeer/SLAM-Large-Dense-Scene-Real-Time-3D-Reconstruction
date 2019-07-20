@@ -66,7 +66,7 @@ W_k = W_{k - 1} + W_{new}
 
 
 ## GPU Based Real-time Volumetric Rendering with Ray Casting
-As we mentioned in previous section, in camera pose tracking, the registration target is derived from the TSDF generated depth map and normal map. The generated depth map and normal map are calculated by the ray-casting algorithm. With a specified camera pose, we want to shoot a ray from each pixel on the image plane to the TSDF volume to get the distance from the pixel to the closest interface it touches. For each ray, the searching process is called ray marching. The efficiency of ray marching can be optimized by adopting adaptive step size given the TSDF value of the voxel [4].  
+As we mentioned in previous section, in camera pose tracking, the registration target is derived from the TSDF generated depth map and normal map. The generated depth map and normal map are calculated by the ray-casting algorithm. With a specified camera pose, we want to shoot a ray from each pixel on the image plane to the TSDF volume to get the distance from the pixel to the closest interface it touches. For each ray, the searching process is called ray marching. The efficiency of ray marching can be optimized by adopting adaptive step size given the TSDF value of the voxel [4]. (Image source [5]) 
 
 <p align="center">
    <img width="600" src= demo/explain_ray_casting.png>
@@ -89,7 +89,7 @@ With the TSDF volume, each voxel is associated with a value indicating the voxel
 ![More Example](demo/raycasting.png)
 
 ## Install
-dependency: 
+Dependency: 
 1. VCG library http://vcg.isti.cnr.it/vcglib/ for geometry processing
 2. Eigen http://eigen.tuxfamily.org/index.php?title=Main_Page for matrix computation
 3. CUDA https://developer.nvidia.com/cuda-downloads for CUDA kernel
