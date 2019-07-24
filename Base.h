@@ -28,30 +28,36 @@ namespace vcg
 {
 	namespace vertex
 	{
-		template <class T> class Coord3m: public Coord<vcg::Point3<MESHLAB_SCALAR>, T> {
+		template <class T> class Coord3m: public Coord<vcg::Point3<MESHLAB_SCALAR>, T> 
+		{
 		public:	static void Name(std::vector<std::string> & name){name.push_back(std::string("Coord3m"));T::Name(name);}
 		};
 
-		template <class T> class Normal3m: public Normal<vcg::Point3<MESHLAB_SCALAR>, T> {
+		template <class T> class Normal3m: public Normal<vcg::Point3<MESHLAB_SCALAR>, T> 
+		{
 		public:	static void Name(std::vector<std::string> & name){name.push_back(std::string("Normal3m"));T::Name(name);}
 		};
 
-		template <class T> class CurvatureDirmOcf: public CurvatureDirOcf<CurvatureDirTypeOcf<MESHLAB_SCALAR>, T> {
+		template <class T> class CurvatureDirmOcf: public CurvatureDirOcf<CurvatureDirTypeOcf<MESHLAB_SCALAR>, T> 
+		{
 		public:	static void Name(std::vector<std::string> & name){name.push_back(std::string("CurvatureDirmOcf"));T::Name(name);}
 		};
 
-		template <class T> class RadiusmOcf: public RadiusOcf<MESHLAB_SCALAR, T> {
+		template <class T> class RadiusmOcf: public RadiusOcf<MESHLAB_SCALAR, T> 
+		{
 		public:	static void Name(std::vector<std::string> & name){name.push_back(std::string("RadiusmOcf"));T::Name(name);}
 		};
 
 	}//end namespace vertex
 	namespace face
 	{
-		template <class T> class Normal3m: public NormalAbs<vcg::Point3<MESHLAB_SCALAR>, T> {
+		template <class T> class Normal3m: public NormalAbs<vcg::Point3<MESHLAB_SCALAR>, T> 
+		{
 		public:  static void Name(std::vector<std::string> & name){name.push_back(std::string("Normal3m"));T::Name(name);}
 		};
 
-		template <class T> class CurvatureDirmOcf: public CurvatureDirOcf<CurvatureDirOcfBaseType<MESHLAB_SCALAR>, T> {
+		template <class T> class CurvatureDirmOcf: public CurvatureDirOcf<CurvatureDirOcfBaseType<MESHLAB_SCALAR>, T> 
+		{
 		public:	static void Name(std::vector<std::string> & name){name.push_back(std::string("CurvatureDirdOcf"));T::Name(name);}
 		};
 
@@ -85,16 +91,14 @@ namespace vcg
 		vcg::vertex::CurvaturefOcf,     /*  0b */
 		vcg::vertex::CurvatureDirmOcf,  /*  0b */
 		vcg::vertex::RadiusmOcf         /*  0b */
-	>{
-	};
+	>{};
 
 	// The Main Edge Class
 	class CEdgeO : public vcg::Edge<CUsedTypesO,
 		vcg::edge::BitFlags,          /*  4b */
 		vcg::edge::EVAdj,
 		vcg::edge::EEAdj
-	>{
-	};
+	>{};
 
 	// Each face needs 32 byte, on 32bit arch. and 48 byte on 64bit arch.
 	class CFaceO    : public vcg::Face<  CUsedTypesO,

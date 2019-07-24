@@ -95,14 +95,17 @@ void setVMatrix(float3 eyepose, float3 eyecenter, float3 upvector, loo::Mat<floa
 	std::cout<<Vmat<<std::endl;
 }
 
-void timer( int value ) {	
+void timer( int value ) 
+{	
 	glutPostRedisplay();
 	glutTimerFunc( 33, timer, 0 );
 }
 void MeshOutput();
-void keyboard( unsigned char key, int x, int y ) {
+void keyboard( unsigned char key, int x, int y ) 
+{
 
-	switch (key) {
+	switch (key) 
+	{
 	case 27:
 		exit(0);
 		break;
