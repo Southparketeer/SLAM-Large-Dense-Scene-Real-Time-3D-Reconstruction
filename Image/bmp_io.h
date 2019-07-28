@@ -14,11 +14,14 @@ void array2bmp(int imageW, int imageH, float* imagesor, std::string name, float 
 	Zero.Blue = 0;
 	Zero.Green = 0;
 	Zero.Alpha = 0;
-	for(int y=0; y<imageH ; y++){
-		for(int x=0; x<imageW ; x++){
+	for(int y=0; y<imageH ; y++)
+	{
+		for(int x=0; x<imageW ; x++)
+		{
 
 			int base=y*imageW+x;
-			if(imagesor[base] < 0.0001) {bmp.SetPixel(x,y,Zero); continue;}
+			if(imagesor[base] < 0.0001) 
+				bmp.SetPixel(x,y,Zero); continue;
 			int d= (int) (imagesor[base] * scale);
 			RGBApixel pix_in;
 			pix_in.Red= d;
@@ -39,8 +42,10 @@ void array2bmpNorm(int imageW, int imageH, float4* imagesor, std::string name, b
 	BMP bmp;
 	bmp.SetSize(imageW,imageH);
 	bmp.SetBitDepth(32);
-	for(int y=0; y<imageH ; y++){
-		for(int x=0; x<imageW ; x++){
+	for(int y=0; y<imageH ; y++)
+	{
+		for(int x=0; x<imageW ; x++)
+		{
 			int base=y*imageW+x;
 			RGBApixel pix_in;
 			if(is_normal)
